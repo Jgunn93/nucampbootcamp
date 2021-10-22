@@ -1,0 +1,42 @@
+h1{
+    text-align: center;
+}
+body{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+#contact{
+    text-align: center;
+}
+#rs3{
+    text-align: center;
+}
+#r6s{
+    text-align: center;
+}
+#montage{
+    text-align: center;
+}
+#header{
+    vertical-align: 27px;
+}
+h2{
+    text-align: center;
+}
+#discord{
+    margin: 20px;
+}
+#twitter{
+    margin: 20px;
+}
+#youtube{
+    margin: 20px;
+}
+#gmail{
+    margin: 20px;
+}
+#apply2{
+    width: 400px;
+    height: 100px;
+}
