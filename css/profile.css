@@ -4,7 +4,7 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 body{
     background-image: linear-gradient(#000, #000,#a970a9,#6441a5, #772ce8,#5c16c5);
@@ -65,18 +65,21 @@ body{
     left: 50%;
     transform: translateX(-50%);
 }
+.mainpage{
+    margin: 0;
+}
 .mainpage #aboutme{
-    margin: 20px;
+    margin-left: 221px;
     line-height: 25px;
 }
 .mainpage #interests{
-    margin: 20px;
+    margin-left: 221px;
 }
 .mainpage #tstream{
-    margin: 20px;
+    margin-left: 221px;
 }
 .mainpage #contactinfo{
-    margin: 20px;
+    margin-left: 221px;
 }
 .interests2{
     padding: 10px;
@@ -105,4 +108,7 @@ body{
 }
 #backtotop a{
     color: #a970ff;
+}
+.rockstuff img{
+    width: 420px;
 }
