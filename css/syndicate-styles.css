@@ -60,6 +60,7 @@ body{
     height: 100%;
     background: #0e0e10;
     padding: 30px 0;
+    top: 100px;
 }
 .wrapper .sidebar h2{
     color: #fff;
@@ -91,13 +92,18 @@ body{
     color: #a970ff
 }
 .header{
-    padding: 20px;
+    padding: 5px;
     /* background: #5c16c5;
     border-bottom: 1px solid; */
-    margin-left: 600px;
+    /* margin-left: 100px; */
     font-size: 150%;
-    border-radius: 25px;
+    /* border-radius: 25px; */
     text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 999px;
+    background: #000;
+    width: 100%;
 }
 .wrapper .sidebar .socialmedia{
     position: absolute;
@@ -119,4 +125,7 @@ body{
     color: #000;
     background: #fff;
     transition-duration: 0.6s;
+}
+#introduction{
+    margin-top: 200px;
 }
