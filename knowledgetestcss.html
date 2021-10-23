@@ -7,9 +7,29 @@
         <link rel="stylesheet" href="css/syndicate-styles.css"/>
     </head>
     <body>
-        <section id="welcome">
-            <h1>
-                <img src="images/logo smaller black2.png" width="75" /><span id="header">Official Sinful Syndicate</span><img src="images/logo smaller black2.png" width="75" /></h1>
+        <div class="wrapper">
+            <div class="sidebar">
+                <h2>Inside the Syndicate</h2>
+                <ul>
+                    <li><a href="#aboutme">About Us</a></li>
+                    <li><a href="#interests">Esports Roster</a></li>
+                    <li><a href="#tstream">Day to Day</a></li>
+                    <li><a href="#contactinfo">Contact Us</a></li>
+                </ul>
+                <div class="socialmedia">
+                    <a href="https://discord.gg/pxHYtG3" target="_blank"><img src="/images/discordlogo.png" width="20" /></a>
+                    <a href="https://twitter.com/sinfulsynic" target="_blank"><img src="/images/twitterbird.png" width="20" height="25" /></a>
+                    <a href="https://www.youtube.com/c/SinfulSynic" target="_blank"><img src="/images/youtubelogo.png" width="20" height="30"></a>
+                </div>
+            </div>
+            <div class="main_content">
+                <div class="header">
+                    <h1><img src="images/logo smaller black2.png" width="75" /><span id="header">Official Sinful Syndicate</span><img src="images/logo smaller black2.png" width="75" /></h1></h1>
+                </div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
         </section>
         <section id="introduction">
             <h2></h2>
@@ -30,14 +50,16 @@
             </p>
         </section>
         <section id="apply">
-            <h2><label for="apply2">Apply to Join The Syndicate</label></h2>
-            <label for="apply2">In the forum below submit why you think you deserve to join the SinfulSyndicate family.</label>
-            <div>
-                <textarea id="apply2" name="apply2" placeholder="Enter your reasons for applying."></textarea>
+            <form class=application action="https://us-central1-nucamp-production.cloudfunctions.net/post/formdata" method="post">
+                <h2><label for="apply2">Apply to Join The Syndicate</label></h2>
+                <label for="apply2">In the forum below submit why you think you deserve to join the SinfulSyndicate family.</label>
                 <div>
-                    <input type="submit" id="submit-btn" class="submitButton"/>
+                    <textarea id="apply2" name="apply2" placeholder="Enter your reasons for applying."></textarea>
+                    <div>
+                        <input type="submit" id="submit-btn" class="submitButton"/>
+                    </div>
                 </div>
-            </div>
+            </form>
         </section>
         <section id="contact">
             <strong>Connect with Us</strong>
