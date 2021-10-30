@@ -10,12 +10,12 @@
         <script>
             const COLORS_ARRAY = ['blue', 'cyan', 'gold', 'gray', 'green', 'magenta', 'orange', 'red', 'white', 'yellow'];
             const spacing = COLORS_ARRAY.join(", ");
+            let numTries = 0;
 
             function runGame() {
                 let guess = '';
                 let guessNumber = 0;
                 let correct = false;
-                let numTries = 0;
                 const targetIndex = Math.floor(Math.random() * COLORS_ARRAY.length);
                 const target = COLORS_ARRAY [targetIndex];
                 console.log(target)
@@ -28,21 +28,21 @@
                     }
                     guessNumber = +guess;
                     numTries +=1;
-                    correct = checkGuess(guess, target);
+                    correct = checkGuess(guess.toLowerCase(), target);
                     } while (!correct)
 
                     document.body.style.background = guess;
                     alert('You got it! The color was ' + target + '.\n\nIt took you ' + numTries + ' tries to guess correctly.');
                 }
-            function checkGuess(guess, target){
+            function checkGuess(guess, target, numTries){
                 let correct = false
 
                 if(!COLORS_ARRAY.includes(guess)) {
-                    alert('Sorry, I don\'t recognize your color. \n\nPlease try again.');
+                    alert('Sorry, I don\'t recognize your color. \n\nPlease try again.\n\n Your current number of attempts is: ' + numTries +'.');
                 } else if(guess < target) {
-                    alert('Sorry, your guess is incorrect. \n\n Hint: your color is alphabetically greater than mine. \n\n Please try again.');
+                    alert('Sorry, your guess is incorrect. \n\n Hint: your color is alphabetically greater than mine. \n\n Please try again. \n\n Your current number of attempts is: ' + numTries +'.');
                 } else if(guess > target) {
-                    alert('Sorry, your guess is incorrect. \n\n Hint: your color is alphabetically lower than mine. \n\n Please try again.');
+                    alert('Sorry, your guess is incorrect. \n\n Hint: your color is alphabetically lower than mine. \n\n Please try again.\n\n Your current number of attempts is: ' + numTries +'.');
                 } else {
                     correct = true;
                 }
