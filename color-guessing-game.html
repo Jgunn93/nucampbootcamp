@@ -7,8 +7,47 @@
     <body>
         <h1>Color Guessing Game</h1>
         <button type="button" onclick="runGame()">Start Game</button>
-        <scirpt>
-            const COLORS_ARRAY = []
-        </scirpt>
+        <script>
+            const COLORS_ARRAY = ['blue', 'cyan', 'gold', 'gray', 'green', 'magenta', 'orange', 'red', 'white', 'yellow'];
+
+            function runGame() {
+                let guess = '';
+                let guessNumber = 0;
+                let correct = false;
+                let numTries = 0;
+                const targetIndex = Math.floor(Math.random() * COLORS_ARRAY.length);
+                const target = COLORS_ARRAY [targetIndex];
+                console.log(target)
+                COLORS_ARRAY.join(", ");
+
+                do {
+                    guess = prompt('I am thinking of one of these colors: \n\n' + COLORS_ARRAY + '\n\nWhat color am I thinking of?\n');
+                    if(guess === null) {
+                        alert('The game has been aborted.');
+                        return ;
+                    }
+                    guessNumber = +guess;
+                    numTries +=1;
+                    correct = checkGuess(guess, target);
+                    } while (!correct)
+
+                    document.body.style.background = guess;
+                    alert('You got it! The color was ' + target + '.\n\nIt took you ' + numTries + ' tries to guess correctly.');
+                }
+            function checkGuess(guess, target){
+                let correct = false
+
+                if(!COLORS_ARRAY.includes(guess)) {
+                    alert('Sorry, I don\'t recognize your color. \n\nPlease try again.');
+                } else if(guess < target) {
+                    alert('Sorry, your guess is incorrect. \n\n Hint: your color is alphabetically greater than mine. \n\n Please try again.');
+                } else if(guess > target) {
+                    alert('Sorry, your guess is incorrect. \n\n Hint: your color is alphabetically lower than mine. \n\n Please try again.');
+                } else {
+                    correct = true;
+                }
+                return correct;
+            }
+        </script>
     </body>
 </html>
