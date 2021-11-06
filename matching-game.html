@@ -42,6 +42,20 @@
             const leftSideImages = theLeftSide.cloneNode(true);
             leftSideImages.removeChild(leftSideImages.lastChild);
             theRightSide.appendChild(leftSideImages); //end part 3
+
+            theLeftSide.lastChild.addEventListener('click', nextLevel)
+
+            document.body.addEventListener('click', gameOver)
+        }
+        function nextLevel() {
+            event.stopPropagation();
+            numberOfFaces += 5;
+            generateFaces();//part1
+        }
+        function gameOver() {
+            alert("Game Over!");//part2
+            document.body.removeEventListener(gameOver, 'click')
+            theLeftSide.lastChild.removeEventListener(nextLevel, 'click')
         }
 
     </script>
