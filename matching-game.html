@@ -26,6 +26,7 @@
     <script>
         let numberOfFaces = 5;
         const theLeftSide = document.getElementById("leftSide");
+        const theRightSide = document.getElementById("rightSide");
 //end part 1
 //starting part 2
         function generateFaces() {
@@ -37,9 +38,12 @@
                 face.style.top = randomTop + 'px';
                 face.style.left = randomLeft + 'px';
                 theLeftSide.appendChild(face);
-            }
+            } //end part 2
+            const leftSideImages = theLeftSide.cloneNode(true);
+            theRightSide.removeChild(theLeftSide)
+            theRightSide.appendChild(leftSideImages) //end part 3, no faces on right
         }
-//end part 2
+
     </script>
 </body>
 </html>
