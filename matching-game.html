@@ -40,8 +40,8 @@
                 theLeftSide.appendChild(face);
             } //end part 2
             const leftSideImages = theLeftSide.cloneNode(true);
-            theRightSide.removeChild(theLeftSide)
-            theRightSide.appendChild(leftSideImages) //end part 3, no faces on right
+            leftSideImages.removeChild(leftSideImages.lastChild);
+            theRightSide.appendChild(leftSideImages); //end part 3
         }
 
     </script>
