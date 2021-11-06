@@ -25,10 +25,11 @@
     <div id="rightSide"></div>
     <script>
         let numberOfFaces = 5
-        const theLeftSide = document.querySelector(#leftSide);
-
+        const theLeftSide = document.getElementById(leftSide);
+//end part 1
+//starting part 2, wont generate faces though.
         function generateFaces() {
-            for ( let i = 0; i < numberOfFaces.length; i++) {
+            for ( let i = 0; i <= numberOfFaces.length; i++) {
                 let face = document.createElement("img")
                 face.src = 'images/smile.png';
                 const randomTop = Math.floor(Math.random() * 400) + 1;
